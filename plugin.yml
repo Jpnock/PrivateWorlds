@@ -1,0 +1,9 @@
+name: PrivateWorlds
+main: net.jpnock.privateworlds.PrivateWorlds
+version: 1.0
+description: Allows for players to have invite-only private worlds.
+commands:
+  privateworlds:
+    description: Plugin help menu.
+    usage: /<command>
+    aliases: [pw]
