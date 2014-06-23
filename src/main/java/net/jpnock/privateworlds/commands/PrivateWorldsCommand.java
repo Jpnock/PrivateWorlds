@@ -9,7 +9,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class PrivateWorldsCommand implements CommandExecutor {
+public class PrivateWorldsCommand extends PWCommandBase implements CommandExecutor {
+
+	public PrivateWorldsCommand() 
+	{
+		super("privateworlds", "privateworlds.privateworlds", Language.PRIVATEWORLDS_CMD_USAGE, Language.PRIVATEWORLDS_CMD_DESC);
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
@@ -25,7 +30,18 @@ public class PrivateWorldsCommand implements CommandExecutor {
 				{
 					if(args.length == 2)
 					{
-						CreateCommand.run(player, args[1]);
+						Commands.createCommand.run(player, args[1]);
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else if(args[0].equals("tp"))
+				{
+					if(args.length == 2)
+					{
+						Commands.tpCommand.run(player, args[1]);
 					}
 					else
 					{

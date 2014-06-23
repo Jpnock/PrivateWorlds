@@ -1,5 +1,6 @@
 package net.jpnock.privateworlds;
 
+import net.jpnock.privateworlds.commands.Commands;
 import net.jpnock.privateworlds.commands.PrivateWorldsCommand;
 
 import org.bukkit.plugin.Plugin;
@@ -10,6 +11,7 @@ public class PrivateWorlds extends JavaPlugin
 {
 	public static Plugin plugin;
 	public static PluginDescriptionFile pdf;
+	public static Commands cmds = new Commands();
 	
 	@Override
 	public void onEnable()
