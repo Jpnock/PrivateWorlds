@@ -1,13 +1,10 @@
 package net.jpnock.privateworlds;
 
-import java.util.ArrayList;
-
-import net.jpnock.privateworlds.commands.Commands;
-
 import org.bukkit.ChatColor;
 
 public class Language
 {
+	public static final String PLUGIN_NAMETAG = "[PrivateWorlds]";
 	public static final String PLUGIN_NAMETAG_PLAYER = ChatColor.GOLD + "[PrivateWorlds]";
 	public static String[] HELP_MENU = PrivateWorlds.cmds.generateHelpMenu();
 	
