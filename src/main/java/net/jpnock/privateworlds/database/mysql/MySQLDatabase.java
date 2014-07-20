@@ -445,42 +445,6 @@ public class MySQLDatabase implements IDataHandler
 		}
 	}
 	
-	public int getInternalUIDFromUUIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA(UUID playerUUID)
-	{
-		Connection conn;
-		
-		try 
-		{
-			conn = getConnection();
-			
-			PreparedStatement stmt = conn.prepareStatement(Queries.DB_SELECT_UUID_FROM_USERID);
-			stmt.setString(1, playerUUID.toString());
-			ResultSet resSet = stmt.executeQuery();
-			if(resSet.next())
-			{
-				// Need to do this as we need to close the statement but that also closes the results set.
-				int pInternalUID = resSet.getInt(1);
-				stmt.close();
-				
-				//if(pInternalUID != 0)
-					return pInternalUID;
-				//else
-				//	return -1;
-				
-			}
-			else
-			{
-				stmt.close();
-				return -1;
-			}
-		} 
-		catch (SQLException e) 
-		{
-			PrivateWorlds.plugin.getLogger().warning(e.getMessage());
-			return -1;
-		}
-	}
-	
 	public DB_RETURN_CODE updateInvitedWorldEndTime(int ownerPlayerUID, int invitedPlayerUID, String worldName, Timestamp newTime)
 	{
 		// Assume that this means expire the InviteEndTime field in the DB.
