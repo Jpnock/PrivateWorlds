@@ -1,0 +1,13 @@
+#Currently only supports mysql
+DatabaseType: mysql
+DatabaseInfo:
+    hostname: ''
+    port: '3306'
+    dbname: ''
+    table_prefix: 'PW_'
+    username: ''
+    password: ''
+
+#Do not change this value! It could lead to the corruption of data if you change it.
+ConfigFileVersion: 2
+DatabaseVersion: 2

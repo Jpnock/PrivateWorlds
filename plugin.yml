@@ -1,9 +1,61 @@
 name: PrivateWorlds
 main: net.jpnock.privateworlds.PrivateWorlds
-version: 1.0
+version: 1.1
 description: Allows for players to have invite-only private worlds.
+author: Jpnock
 commands:
   privateworlds:
     description: Plugin help menu.
     usage: /<command>
     aliases: [pw]
+permissions:
+  privateworlds.*:
+    description: Gives access to all of the plugin's commands.
+    children:
+      privateworlds.world.create: true
+      privateworlds.world.tp: true
+      privateworlds.world.tpi: true
+      privateworlds.list: true
+      privateworlds.listinv: true
+      privateworlds.world.invite: true
+      privateworlds.world.removeaccess: true
+  privateworlds.user:
+    description: Gives access to the general user commands of the plugin.
+    children:
+      privateworlds.world.create: true
+      privateworlds.world.tp: true
+      privateworlds.world.ti: true
+      privateworlds.list: true
+      privateworlds.listinv: true
+      privateworlds.world.invite: true
+      privateworlds.world.removeaccess: true
+  privateworlds.basic:
+    description: Gives access to the basic user commands of the plugin so that players cannot create a world.
+    children:
+      privateworlds.world.tp: true
+      privateworlds.world.tpi: true
+      privateworlds.list: true
+      privateworlds.listinv: true
+      privateworlds.world.invite: true
+      privateworlds.world.removeaccess: true
+  privateworlds.world.create:
+    description: Allows you to create a PrivateWorld.
+    default: op
+  privateworlds.world.tp:
+    description: Allows you to teleport to a PrivateWorld you own.
+    default: op
+  privateworlds.world.tpi:
+    description: Allows you to teleport to a PrivateWorld you have been invited to.
+    default: op
+  privateworlds.list:
+    description: Allows you to list the PrivateWorlds you own.
+    default: op
+  privateworlds.listinv:
+    description: Allows you to list the PrivateWorlds you are invited to.
+    default: op
+  privateworlds.world.invite:
+    description: Allows you to invite a person to your PrivateWorld.
+    default: op
+  privateworlds.world.removeaccess:
+    description: Allows you to remove access to a player invited to your world.
+    default: op

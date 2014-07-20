@@ -4,11 +4,11 @@ import org.bukkit.entity.Player;
 
 public abstract class PWCommandBase
 {
-	public final String cmdName;
-	public final String permNode;
+	public String cmdName;
+	public String permNode;
 	public String subCMDName;
-	public final String cmdUsage;
-	public final String cmdDesc;
+	public String cmdUsage;
+	public String cmdDesc;
 	
 	public PWCommandBase(final String cmdName, final String permNode, final String cmdUsage, final String cmdDesc)
 	{
@@ -29,7 +29,22 @@ public abstract class PWCommandBase
 	
 	public boolean hasPermission(Player player)
 	{
-		//return player.hasPermission(permNode);
-		return true;
+		// If no permission node set, say we have permission.
+		if(permNode == null || permNode.equals(""))
+			return true;
+		
+		return player.hasPermission(permNode);
+		//return true;
 	}
+	
+	public String getCmdName()
+	{
+		return cmdName;
+	}
+	
+	public void setCmdName(String cmdName)
+	{
+		this.cmdName = cmdName;
+	}
+
 }
