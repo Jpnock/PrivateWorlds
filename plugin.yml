@@ -24,7 +24,7 @@ permissions:
     children:
       privateworlds.world.create: true
       privateworlds.world.tp: true
-      privateworlds.world.ti: true
+      privateworlds.world.tpi: true
       privateworlds.list: true
       privateworlds.listinv: true
       privateworlds.world.invite: true
