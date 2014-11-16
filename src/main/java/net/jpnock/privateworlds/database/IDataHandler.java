@@ -37,6 +37,14 @@ public interface IDataHandler
 	 * @return A code from the DB_RETURN_CODE enum.
 	 */
 	public DB_RETURN_CODE insertPlayerOwnedWorld(UUID playerUUID, String worldName);
+	
+	/**
+	 * Deletes a player owned private world from the database.
+	 * @param playerUUID - The UUID of the player owning the private world.
+	 * @param worldName - Name of what the world is called.
+	 * @return A code from the DB_RETURN_CODE enum.
+	 */
+	public DB_RETURN_CODE deletePlayerOwnedWorld(UUID playerUUID, String worldName);
 
 	/**
 	 * Inserts or updates a player in the PW_Users table.

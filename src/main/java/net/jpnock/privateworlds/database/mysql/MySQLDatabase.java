@@ -215,6 +215,13 @@ public class MySQLDatabase implements IDataHandler
 	}
 	
 	@Override
+	public DB_RETURN_CODE deletePlayerOwnedWorld(UUID playerUUID, String worldName) 
+	{
+		//Not implemented yet
+		return DB_RETURN_CODE.INTERNAL_SERVER_ERROR;
+	}
+	
+	@Override
 	public DB_RETURN_CODE insertPlayerInvitedWorld(UUID playerOwnerUUID, String worldName, UUID playerInvitedUUID, long msLengthOfTime) 
 	{
 		Connection conn;

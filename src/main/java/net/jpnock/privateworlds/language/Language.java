@@ -19,6 +19,9 @@ public class Language {
 		public static final String PRIVATEWORLDS_CREATE_CMD_USAGE = "/privateworlds create <worldname>";
 		public static final String PRIVATEWORLDS_CREATE_CMD_DESC = "Creates a new world.";
 		
+		public static final String PRIVATEWORLDS_DELETE_CMD_USAGE = "/privateworlds delete <worldname>";
+		public static final String PRIVATEWORLDS_DELETE_CMD_DESC = "Deletes a world that you own.";
+		
 		public static final String PRIVATEWORLDS_TP_CMD_USAGE = "/privateworlds tp <worldname>";
 		public static final String PRIVATEWORLDS_TP_CMD_DESC = "Teleports you to a world that you have created.";
 		
